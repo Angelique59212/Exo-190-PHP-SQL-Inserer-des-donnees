@@ -1,4 +1,6 @@
 <?php
+require 'Config.php';
+require 'Connect.php';
 
 /**
  * Pour cet exercice, vous allez utiliser la base de données table_test_php créée pendant l'exo 189
@@ -9,14 +11,16 @@ try {
     /**
      * Créez ici votre objet de connection PDO, et utilisez à chaque fois le même objet $pdo ici.
      */
-    $pdo = new P...;
+    $myconnexion = Connect::dbConnect();
 
     /**
      * 1. Insérez un nouvel utilisateur dans la table utilisateur.
      */
 
     // TODO votre code ici.
-
+    $sql = "
+        INSERT INTO user (name, first_name, mail, password, adress, postal_code, country, )
+    ";
 
     /**
      * 2. Insérez un nouveau produit dans la table produit
